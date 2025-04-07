@@ -51,6 +51,8 @@ async function fetchData() {
 
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);
+    const container = document.getElementById('data-container');
+    container.innerHTML = '<p>error</p>';
   }
 }
 
