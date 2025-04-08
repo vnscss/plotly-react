@@ -34,14 +34,14 @@ async function fetchData() {
     const data = await response.json();
     const container = document.getElementById('data-container');
 
-    // Insere o HTML do Plotly diretamente
+    
     if (data.html) {
       container.innerHTML = data.html;
     } else {
       container.innerHTML = '<p>error</p>';
     }
 
-    // Se o HTML usa <script>, precisamos forçar a execução dos scripts
+
     const scripts = container.querySelectorAll('script');
     scripts.forEach((oldScript) => {
       const newScript = document.createElement('script');
